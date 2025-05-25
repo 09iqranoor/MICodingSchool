@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import HeroSection from './Components/HeroSection';
 import { FaMoon, FaSun } from 'react-icons/fa';
+import Navbar from './Components/Navbar';
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
 
@@ -17,11 +18,13 @@ export default function App() {
     <>
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className="fixed top-5 right-5   p-2 rounded z-50"
+        className="fixed top-24 right-5  p-2 rounded z-50"
       >
         {darkMode ? <FaSun size={20} className=' text-yellow-300' /> : <FaMoon className='text-black' size={20} />}
       </button>
-      <HeroSection  darkMode={darkMode} />
+      <Navbar darkMode={darkMode} />
+      <HeroSection   />
+      
     </>
   );
 }

@@ -2,22 +2,21 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
-import logo from '../assets/logo-mi.png';
-import logolight from '../assets/logo-light.png';
+
 import { Typewriter } from 'react-simple-typewriter';
 
 import { FaGithub, FaHtml5, FaCss3Alt, FaBootstrap, FaJsSquare, FaReact } from "react-icons/fa";
 export default function HeroSection({darkMode}) {
   return (
-    <section className="bg-white dark:bg-[#0a0f1c] transition-colors duration-500">
+    <section className="bg-white min-h-screen dark:bg-[#0a0f1c] transition-colors duration-500">
       <div className="relative text-gray-900 dark:text-white min-h-screen flex justify-center items-center overflow-hidden rounded-t-[2rem] px-6 py-10">
-        <img src={darkMode ?  logo : logolight} alt="Logo" className="absolute top-6 left-6 w-20 h-auto z-20" />
+        {/* <img src={darkMode ?  logo : logolight} alt="Logo" className="absolute top-6 left-6 w-20 h-auto z-20" /> */}
         <div className="text-center relative z-10 max-w-3xl">
           <p className="uppercase font-bold underline text-sm tracking-widest text-red-400 dark:text-red-600 mb-4">
           <Typewriter
               words={[
                 'Welcome to MICODINGSCHOOL...',
-                'Online web development Academy.',
+                'Online web development Academy....',
                 'Make Your future bright....'
               ]}
               loop={true}
