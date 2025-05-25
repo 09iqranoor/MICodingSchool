@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.orbit-container {
+    position: relative;
+    width: 900px;
+    height: 900px;
+    animation: rotate 20s linear infinite;
+  }
+  
+  .orbit-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: center;
+    animation: counter-rotate 20s linear infinite reverse;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes counter-rotate {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(-360deg); }
+  }
+  
